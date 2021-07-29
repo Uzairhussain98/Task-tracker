@@ -1,15 +1,33 @@
+import React, {useContext}  from 'react'
+import {GlobalContext} from './contexts/GlobalState'
+import { FaTimes } from 'react-icons/fa'
 
 
-const Tasks = ({tasks} ) => {
+
+const Tasks = ( ) => {
+
+  const { tasks , deleteTask}   = useContext(GlobalContext);
+
     
 
 
   return (
-    <>
-        {tasks.map((tasks) => (<h3 key={tasks.id}>{tasks.text} on {tasks.day}</h3>))}
+    <div className="task">
+         {
+          tasks.map(task => ( 
+          <div>
+          <h3> {task.text}
+          <FaTimes  onClick={ ()=> deleteTask(task.id)  } style={{color:"red"}} />
+
+           </h3> 
+            </div>     
+             ))}
       
-    </>
+    </div>
   )
 }
 
 export default Tasks
+
+
+
