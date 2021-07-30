@@ -4,10 +4,10 @@ export default (state, action) => {
         return{
             ...state,
             tasks : state.tasks.filter(task => task.id !== action.payload )}
-    case 'ADD_TRANSACTION' :
+    case 'ADD_TASK' :
     return    {
         ...state,
-        transactions : [action.payload,...state.transactions]
+        tasks : [action.payload,...state.tasks]
 
 
     }     

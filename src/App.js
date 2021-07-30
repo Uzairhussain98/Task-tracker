@@ -3,6 +3,7 @@ import Tasks from "./components/Tasks";
 import './index.css';
 import React ,{ useContext} from 'react'
 import {GlobalProvider , GlobalContext } from './components/contexts/GlobalState';
+import AddTask from "./components/AddTask";
 
 
 
@@ -18,7 +19,8 @@ function App() {
     <GlobalProvider>
     <div className="container">
       <Header title="Hello"/>
-      <Tasks tasks={tasks}/>
+      <Tasks />
+      <AddTask/>
 
       
     

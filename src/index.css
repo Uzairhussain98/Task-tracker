@@ -25,6 +25,8 @@ body {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
+  padding: 10px 20px;
+  margin-left: 60px;
 }
 
 .btn {
@@ -81,6 +83,9 @@ body {
 
 .form-control label {
   display: block;
+  font-size: larger;
+  font-weight: 400;
+  margin-left: 5px;
 }
 
 .form-control input {

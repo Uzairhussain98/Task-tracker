@@ -33,7 +33,6 @@ export const GlobalProvider = ( {children} ) => {
     const [state, dispatch ] = useReducer(AppReducer,initialState);
 
 
-   
     function deleteTask(id){
         dispatch({
             type: 'DELETE_TASK',
@@ -42,11 +41,10 @@ export const GlobalProvider = ( {children} ) => {
         }) }
 
 
-
-        function addTasks(transaction){
+        function addTask(task){
             dispatch({
                 type: 'ADD_TASK',
-                payload : transaction
+                payload : task
     
             }) }
     
@@ -54,7 +52,7 @@ export const GlobalProvider = ( {children} ) => {
 
     return ( <GlobalContext.Provider value={ {tasks : state.tasks,
         deleteTask,
-        addTasks
+        addTask,
           }}>
         {children}
     </GlobalContext.Provider>

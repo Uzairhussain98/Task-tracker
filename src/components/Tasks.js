@@ -20,6 +20,7 @@ const Tasks = ( ) => {
           <FaTimes  onClick={ ()=> deleteTask(task.id)  } style={{color:"red"}} />
 
            </h3> 
+           <p>{task.day}</p>
             </div>     
              ))}
       
